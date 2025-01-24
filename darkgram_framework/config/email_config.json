@@ -1,0 +1,6 @@
+{
+    "smtp_server": "<SMTP_address>",
+    "smtp_port": "<SMTP Port",
+    "email_address": "<Email>",
+    "email_password": "<Password>"
+}
