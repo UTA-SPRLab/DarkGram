@@ -168,10 +168,12 @@ category_names = [
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-api_id = 29616271  # Use your actual api_id
-api_hash = 'e3feb8c8e7be3ca9e7bfeea177958f1b'  # Use your actual api_hash
-phone = '+18179323476'  # Use your actual phone number
-username = "SayakSR"    # Use your actual username
+with open("configs/tg_auth.json", "r") as f:
+    tg_auth = json.load(f)
+api_id = tg_auth["api_id"]
+api_hash = tg_auth["api_hash"]
+phone = tg_auth["phone"]
+username = tg_auth["username"]
 
 client = TelegramClient(username, api_id, api_hash)
 
