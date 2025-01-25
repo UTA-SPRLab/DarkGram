@@ -2,6 +2,7 @@ import os
 import openai
 import pandas as pd
 import time
+import sys
 
 # Azure OpenAI credentials
 openai.api_key = os.getenv("AZURE_OPENAI_API_KEY")  # Use environment variable for security
@@ -101,7 +102,7 @@ def process_software_csv(input_csv, output_csv, skipped_csv):
         time.sleep(5)
 
 # Define file paths
-input_csv = 'softwares.csv'
+input_csv = sys.argv[1]
 output_csv = 'software_category.csv'
 skipped_csv = 'skipped_category.csv'
 
